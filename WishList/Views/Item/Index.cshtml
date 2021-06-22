@@ -7,8 +7,10 @@
 @foreach (var item in Model)
 {
     <ul>
-        <li>@item.Description</li>
+        <li>
+            @item.Description    
+            <a asp-action="delete" asp-route-id="@item.Id">delete</a>
+        </li>
     </ul>
-    <a asp-action="delete" asp-route-id="@item.Id">delete</a>
 }
 
